@@ -17,7 +17,10 @@ client.once("ready", () => {
 client.on("messageCreate", (message) => {
   if (message.content.toLowerCase() === "!roll") {
     const result = Math.floor(Math.random() * 6) + 1;
-    message.channel.send(`🎲 You rolled a **${result}**!`);
+
+    message.channel.send(
+      `🎲 ${message.member.displayName} rolled a **${result}**`
+    );
   }
 });
 
