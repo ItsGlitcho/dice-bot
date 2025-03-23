@@ -19,7 +19,7 @@ client.on("messageCreate", (message) => {
     const result = Math.floor(Math.random() * 6) + 1;
 
     message.channel.send(
-      `🎲 ${message.member.displayName} rolled a **${result}**`
+      `🎲 ${message.member.displayName} rolled a **${result}**!`
     );
   }
 });
