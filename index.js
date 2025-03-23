@@ -83,4 +83,6 @@ client.on("messageCreate", (message) => {
   }
 });
 
+console.log("test")
+
 client.login(process.env.TOKEN);
