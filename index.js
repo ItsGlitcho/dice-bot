@@ -41,7 +41,7 @@ app.listen(PORT, () => {
 const fetch = require("node-fetch");
 
 setInterval(() => {
-  fetch("https://dice-bot-k3vm.onrender.com/") // Replace with your actual URL
+  fetch("https://dice-bot-k3vm.onrender.com/")
     .then((res) => console.log(`Self-ping status: ${res.status}`))
     .catch((err) => console.error("Self-ping failed:", err));
 }, 5 * 60 * 1000); // Runs every 5 minutes
