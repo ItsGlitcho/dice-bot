@@ -29,20 +29,26 @@ client.once("ready", () => {
 client.on("messageCreate", (message) => {
   if (message.content.toLowerCase() === "!roll") {
 
-    const fixedPlayerId = "1292615735964733543"; // Replace with the actual Discord user ID
-    const fixedNumber = 6; // The number they always roll
+    // rig the dice code 
+    //==========================================================================
 
-    let result;
-    if (message.author.id === fixedPlayerId) {
-      result = fixedNumber;
-    } else {
-      result = Math.floor(Math.random() * 6) + 1;
-    }
+    // const fixedPlayerId = "1292615735964733543"; // Replace with the actual Discord user ID
+    // const fixedNumber = 6; // The number they always roll
 
-    // const result = Math.floor(Math.random() * 6) + 1;
-    // message.channel.send(
-    //   `🎲 ${message.member.displayName} rolled a **${result}**!`
-    // );
+    // let result;
+    // if (message.author.id === fixedPlayerId) {
+    //   result = fixedNumber;
+    // } else {
+    //   result = Math.floor(Math.random() * 6) + 1;
+    // }
+
+    // end the rigged dice 
+    //=============================================================
+
+    const result = Math.floor(Math.random() * 6) + 1;
+    message.channel.send(
+      `🎲 ${message.member.displayName} rolled a **${result}**!`
+    );
   }
 });
 
