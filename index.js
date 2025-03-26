@@ -28,10 +28,21 @@ client.once("ready", () => {
 
 client.on("messageCreate", (message) => {
   if (message.content.toLowerCase() === "!roll") {
-    const result = Math.floor(Math.random() * 6) + 1;
-    message.channel.send(
-      `🎲 ${message.member.displayName} rolled a **${result}**!`
-    );
+
+    const fixedPlayerId = "1292615735964733543"; // Replace with the actual Discord user ID
+    const fixedNumber = 6; // The number they always roll
+
+    let result;
+    if (message.author.id === fixedPlayerId) {
+      result = fixedNumber;
+    } else {
+      result = Math.floor(Math.random() * 6) + 1;
+    }
+
+    // const result = Math.floor(Math.random() * 6) + 1;
+    // message.channel.send(
+    //   `🎲 ${message.member.displayName} rolled a **${result}**!`
+    // );
   }
 });
 
